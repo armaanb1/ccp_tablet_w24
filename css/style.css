@@ -98,11 +98,16 @@ nav ul li a {
         flex: 1 0 auto;
     }
 
-    .menu {
+    .menu ul {
         display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+    
+    .menu li {
+        text-align: center;
+        flex: 1;
     }
 
     .menu li {
@@ -127,15 +132,26 @@ nav ul li a {
     }
 
     nav ul li {
-        padding: 10px 5px;
+        padding: 10px 0; 
     }
 
     img {
         max-width: 400px;
         max-height: 400px;
     }
+    .img-text-container {
+        position: relative;
+    }
+    
+    .img-text {
+        position: absolute;
+        bottom: 0;
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        padding: 10px;
+        width: 100%;
+    }
 }
-
 
 
 @media screen and (prefers-reduced-motion: reduce) {
@@ -163,6 +179,7 @@ nav ul li a {
     text-align: center;
     padding: 20px 0;
     font-size: 20px;
+    grid-column: 1 / -1;
 }
 
 .grid-item {
